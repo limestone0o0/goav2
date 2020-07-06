@@ -3,6 +3,8 @@
 
 package avcodec
 
+import "C"
+
 func (ctxt *Context) ActiveThreadType() int {
 	return int(ctxt.active_thread_type)
 }
@@ -459,12 +461,19 @@ func (ctxt *Context) ThreadCount() int {
 	return int(ctxt.thread_count)
 }
 
+func (ctxt *Context) SetThreadCount(c int) {
+	ctxt.thread_count = C.int(c)
+}
+
 func (ctxt *Context) ThreadSafeCallbacks() int {
 	return int(ctxt.thread_safe_callbacks)
 }
 
 func (ctxt *Context) ThreadType() int {
 	return int(ctxt.thread_type)
+}
+func (ctxt *Context) SetThreadType(t int) {
+	ctxt.thread_type = C.int(t)
 }
 
 func (ctxt *Context) TicksPerFrame() int {

@@ -194,6 +194,9 @@ func AvFrameGetInfo(f *Frame) (width int, height int, linesize [8]int32, data [8
 func GetBestEffortTimestamp(f *Frame) int64 {
 	return int64(f.best_effort_timestamp)
 }
+func (f *Frame) Pts() int64 {
+	return int64(f.pts)
+}
 
 // //static int get_video_buffer (Frame *frame, int align)
 // func GetVideoBuffer(f *Frame, a int) int {
