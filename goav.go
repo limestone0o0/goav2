@@ -18,4 +18,4 @@ Contains:
 	libpostproc: post processing library
 	libswscale: color conversion and scaling library
 */
-package goav
+package goav2
