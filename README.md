@@ -9,7 +9,7 @@ A comprehensive binding to the ffmpeg video/audio manipulation library.
 
 `````go
 
-import "github.com/limestone0o0/goav/2avformat"
+import "github.com/limestone0o0/goav2/avformat"
 
 func main() {
 
